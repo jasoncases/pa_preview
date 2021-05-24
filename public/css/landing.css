@@ -1,0 +1,114 @@
+.landing-container {
+  padding-top: 1px;
+  margin-top: -1px;
+  height: 90%;
+  width: 90%;
+  margin: 5%;
+  /* overflow: auto; */
+  display: block;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.landing-content-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+}
+.landing-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  width: 50%;
+}
+.landing-item {
+  /* display: block; */
+  width: 90%;
+  height: 45% !important;
+  margin: 2%;
+  background-color: white;
+  border: 1px solid rgb(22, 60, 78);
+  overflow: hidden;
+  border-radius: 3px;
+}
+.landing-heading {
+  padding: 6px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  background-color: rgb(22, 60, 78);
+  color: white;
+}
+.landing-heading a {
+  font-weight: 600;
+}
+.landing-content {
+  width: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+}
+.record-container > a {
+  color: black;
+  border-bottom: 1px solid rgb(216, 215, 215);
+}
+.record-container {
+  width: 100%;
+  height: fit-content;
+  min-height: 100%;
+}
+
+.landing-content-new {
+  overflow: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+.record-container > .spinner-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-timesheet {
+  background-color: rgb(228, 228, 228);
+}
+
+#breaktimer-container + .endBreakBtnSpacing {
+  position: relative;
+  bottom: 40px;
+  color: #e94444;
+}
+#breaktimer-container {
+  margin-top: auto;
+}
+@media (max-width: 1023px) {
+  .landing-container {
+    overflow-y: auto;
+    width: 100%;
+    margin: 3px 12px 0 12px;
+    height: 100%;
+  }
+  .landing-content-container {
+    height: fit-content;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .landing-row {
+    height: fit-content;
+    width: 100%;
+  }
+  .landing-item {
+    height: 360px;
+  }
+  .landing-content {
+    height: 350px;
+  }
+}

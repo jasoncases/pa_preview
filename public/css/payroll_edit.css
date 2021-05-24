@@ -1,0 +1,125 @@
+.payroll-edit__container {
+    display: grid;
+    grid-template-columns: repeat(1fr, 12);
+    grid-template-rows: max-content 1fr;
+    height: 80%;
+    width: 80%;
+    margin: 5% 10%;
+}
+
+.payroll-edit__employee {
+    width: 500px;
+    height: 250px;
+    border: 1px solid darkgrey;
+    background-color: lightgray;
+    border-radius: 5px;
+    margin: 15px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.payroll-edit__employee > .title {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 16px;
+}
+
+.payroll-employee__detail {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 16px;
+}
+
+.payroll-employee__detail > div {
+    margin: 8px 0;
+}
+
+.payroll-edit__shift {
+    width: 100%;
+    max-width: 800px;
+    height: fit-content;
+    max-height: 100%;
+    margin: 0 auto;
+    border: 1px solid hsl(0, 0%, 80%);
+    background-color: hsl(0, 0%, 97%);
+    border-radius: 5px;
+    font-size: 16px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.payroll-edit__shift .title-row {
+    font-weight: 600;
+    background-color: hsl(0, 0%, 93%);
+    border-bottom: 1px solid hsl(0, 0%, 80%);
+}
+
+.payroll-edit__stamp {
+    width: 90%;
+    height: 90px;
+    border-radius: 3px;
+    background-color: hsl(0, 0%, 93%);
+    border: 1px solid hsl(0, 0%, 80%);
+}
+
+.payroll-edit__stamp .edit-icon{
+    display: none;
+    position: absolute;
+    top: 14px;
+    right: 24px;
+}
+
+.payroll-edit__stamp > details{
+    border-radius: 3px;
+}
+
+.payroll-edit__stamp > details[open]{
+    background-color: lightsteelblue;
+}
+
+.payroll-edit__stamp > details[open] .stamp-hover{
+    display: none;
+}
+
+.payroll-edit__stamp > details[open] form{
+    display: flex;
+    padding: 4px 8px;
+}
+
+.payroll-edit__stamp form.time {
+    padding: 2px 0;
+}
+
+.payroll-edit__stamp form .btn-container {
+   width: 50px;
+   margin-left: 8px;
+}
+
+.payroll-edit__stamp input[type="text"] {
+   width: 40px;
+   text-align: center;
+   padding: 4px 0;
+}
+
+.payroll-edit__stamp input[type="text"].years {
+   width: 60px;
+   font-size: 16px;
+   text-align: center;
+}
+
+
+.stamp-hover {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
+    padding: 6px 0;
+}
+
+.stamp-hover:hover  .edit-icon {
+    display: block;
+}
+

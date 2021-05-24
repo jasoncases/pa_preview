@@ -1,0 +1,88 @@
+.cr-container {
+   height: 100%;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   overflow: auto;
+}
+.cr-row {
+   width: 100%;
+   height: fit-content !important;
+   min-height: fit-content !important;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   height: auto;
+}
+.cr-hover {
+   pointer-events: all;
+}
+.cr-hover:hover {
+   background-color: hsl(205, 65%, 93%);
+}
+.cr-primary-row {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   border-bottom: 1px solid black;
+   padding: 7px 0;
+   font-size: 1.2rem;
+   min-height: fit-content !important;
+}
+.cr-secondary-row {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-end;
+   pointer-events: all;
+   border-bottom: 1px solid grey;
+}
+.cr-secondary-row-red {
+   background-color: rgb(252, 235, 228) !important;
+}
+.cr-secondary-row-green {
+   background-color: rgb(233, 255, 241) !important;
+}
+.cr-row-green {
+   background-color: rgb(190, 228, 204);
+}
+.cr-row-green:hover {
+   background-color: rgb(128, 204, 156);
+}
+.cr-row-red {
+   background-color: rgb(228, 197, 185);
+}
+.cr-row-red:hover {
+   background-color: rgb(218, 162, 139);
+}
+.cr-row-grey:hover {
+   background-color: rgb(192, 192, 192);
+}
+.cr-row-grey {
+   background-color: rgb(233, 233, 233);
+}
+.cr-item {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+   flex: 3;
+   word-wrap: normal;
+   height: 100%;
+   min-height: fit-content !important;
+   padding: 4px;
+}
+.cr-item-sm {
+   flex: 1;
+   min-width: 40px;
+   max-width: 45px;
+}
+.collapse {
+   display: none;
+}
+.cr-row-main {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   padding: 4px;
+}

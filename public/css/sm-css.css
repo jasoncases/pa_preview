@@ -1,0 +1,106 @@
+.sm-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+  /* border:1px solid blue; */
+}
+.sm-element-main {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  /* border:1px solid green; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.sm-element-header {
+  font-size: 2.8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 5px;
+}
+.sm-element-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
+  /* border: 1px solid red; */
+}
+.sm-content-header-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+.sm-content-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
+}
+.sm-content-column-mobile {
+  display: none;
+}
+@media (max-width: 1700px) {
+  /* .sm-content-header-row {
+      height: 138px;
+   } */
+  .sm-content-header-row {
+    display: none;
+  }
+  .sm-content-column-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+  .sm-content-mobile-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+  }
+  .sm-content-mobile-item {
+    margin: 0 12px;
+  }
+  .sm-content-mobile-row-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .sm-content-mobile-row-group {
+    width: 1080px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 11px;
+  }
+  .sm-content-mobile-row-subgroup {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+  }
+  .left {
+    justify-content: flex-start;
+  }
+  .right {
+    justify-content: flex-end;
+  }
+}
+
+.schedule-module_settings-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 24px;
+  padding: 5px 7px;
+  z-index: 975;
+}

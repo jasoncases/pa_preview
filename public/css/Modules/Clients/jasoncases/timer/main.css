@@ -1,0 +1,63 @@
+.open-session-container {
+    font-size: 16px;
+    border: 1px solid darkgrey;
+    background-color: lightgrey;
+    color: black;
+    border-radius: 5px;
+  }
+  .open-session-container > .flex-row:first-of-type {
+  }
+  .open-session-container > .flex-row {
+    width: 100%;
+    padding: 8px 0;
+  }
+  .open-session-container .Running {
+    color: var(--action-green);
+  }
+  .open-session-container .Paused {
+    color: orange;
+  }
+  .pause-button {
+    font-size: 70px;
+    color: yellow;
+  }
+  .history-container {
+    font-size: 12px;
+    margin: 25px auto;
+    background-color: grey;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .history-container > :nth-child(odd) {
+    background-color: darkgray;
+  }
+  .history-container > div {
+    padding: 8px 8px;
+  }
+  .history-container .date {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .history-container .data {
+    font-size: 14px;
+  }
+  .history-container .header {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .text-imp {
+    font-weight: 600;
+  }
+  .test {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .history-container {
+      width: 100%;
+    }
+  }

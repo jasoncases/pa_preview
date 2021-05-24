@@ -1,0 +1,6 @@
+drawer-button:not(:defined) {
+   opacity: 0;
+}
+date-select:not(:defined) {
+   display: none;
+}

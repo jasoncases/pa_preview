@@ -1,0 +1,670 @@
+/* Default Button Styling    */
+button {
+  touch-action: manipulation;
+}
+
+.btn {
+  -webkit-appearance: none;
+  border-radius: 3px;
+  display: block;
+  font-size: 1.6rem;
+  padding: 9px 25px;
+  margin: 2px 5px;
+  width: fit-content;
+  height: fit-content;
+  color: white;
+  text-align: center;
+  border: none;
+  pointer-events: all;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  user-select: none !important;
+  -moz-user-select: none !important;
+  -webkit-user-select: none !important;
+  /* z-index: 1000; */
+}
+
+.voice-btn {
+  padding: 6px 25px;
+}
+
+.btn:disabled {
+  cursor: default;
+}
+
+.btn-flat {
+  font-size: 1.6rem;
+  display: block;
+  padding: 9px 25px;
+  text-decoration: none;
+  margin: 2px 5px;
+  background-color: hsla(0, 0%, 100%, 0);
+  color: black;
+  border: 1px solid black;
+}
+
+.btn:active {
+  /* transform: scale(0.99, 0.99); */
+  transform-origin: 0, 0;
+  /* font-size: 1.5rem; */
+}
+button:focus,
+.btn:focus {
+  outline: none !important;
+}
+button:active,
+.btn:active {
+  outline: none !important;
+}
+
+.btn-float {
+  /* box-shadow: 0px 1px hsla(0, 0%, 0%, 0.25), 1px 4px hsla(0, 0%, 0%, 0.15); */
+}
+
+.btn-float:active {
+  box-shadow: 1px 2px hsla(0, 0%, 0%, 0.25);
+}
+/* BUTTON CODE ARCHIVE ---------------------------------- */
+.btn-span {
+  width: 100%;
+
+  margin: 8px 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+/* .btn {
+    height: 25px;
+    width: 40%;
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
+ } 
+  
+  .btn {
+    padding: 0;
+    height: 50px;
+    width: 80px;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    line-height: 50px;
+    -webkit-transition: background-color 0.25s, height 0.25s, width 0.25s;
+    transition: background-color 0.25s, height 0.25s, width 0.25s;
+ } 
+ --------------------------------------------------------- */
+
+/* ! BTN - CATEGORIES ------------------------------------ */
+
+/* * BTN ACTION  ----------------------------------------------------- */
+
+.btn-action {
+  background-color: hsl(147, 57%, 38%);
+  color: white;
+}
+
+/* *--------------------------------------  ACTION [MODIFIERS] ------- */
+.btn-action:hover {
+  background-color: #56d690;
+}
+
+/* ! BTN DANGER ------------------------------------------------------ */
+
+.btn-danger {
+  background-color: hsl(0, 35%, 55%);
+  color: white;
+}
+
+/* !--------------------------------------  DANGER [MODIFIERS] ------- */
+
+.btn-danger:hover {
+  background-color: rgb(221, 98, 87);
+  color: white;
+}
+.btn-danger-inv {
+  background-color: hsl(0, 0%, 88%);
+  color: hsl(0, 35%, 55%);
+  border: hsl(0, 0%, 80%);
+}
+.btn-danger-inv:hover {
+  background-color: hsl(0, 0%, 80%);
+  color: hsl(0, 35%, 50%);
+  border: hsl(0, 0%, 80%);
+}
+/* ? BTN ADMIN  ------------------------------------------------------ */
+
+.btn-admin {
+  background-color: rgb(65, 160, 163);
+  color: white;
+}
+
+/* ?--------------------------------------  ADMIN  [MODIFIERS] ------- */
+
+.btn-admin:hover {
+  background-color: rgb(112, 206, 209);
+}
+
+/* ? BTN SMALL  ------------------------------------------------------ */
+.btn-small {
+  padding: 4px 4px;
+  /* line-height: 2rem; */
+  font-size: 1.2rem;
+}
+
+.btn-tiny {
+  padding: 2px 5px;
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0px;
+}
+
+/* ?--------------------------------------  SMALL  [MODIFIERS] ------- */
+
+/* ? BTN CLOCK  ------------------------------------------------------ */
+
+.btn-clock {
+  cursor: pointer;
+  /* height: 48px; */
+  font-size: 2rem;
+  background: rgb(82, 156, 144);
+  font-weight: normal;
+  color: white;
+  padding: 18px 11px;
+  user-select: none;
+  font-family: 'Montserrat';
+}
+/* ?--------------------------------------  CLOCK  [MODIFIERS] ------- */
+.btn-clock:not([disabled]):hover {
+  background: rgb(110, 175, 164);
+}
+.btn-clock:active {
+  filter: brightness(110%);
+  outline: none;
+}
+.btn-clock:focus {
+  outline: none !important;
+}
+.btn-clock-inactive {
+  cursor: default;
+  filter: saturate(80%) brightness(80%);
+}
+
+/* ? --------------------------------------------CLOCK MOBILE ----------------*/
+@media (max-width: 750px) {
+  .btn-clock {
+    cursor: pointer;
+    font-size: 16px;
+    background: rgb(82, 156, 144);
+    font-weight: normal;
+    color: white;
+    padding: 16px 12px;
+    user-select: none;
+    font-family: 'Montserrat';
+    width: 30%;
+    height: 100%;
+  }
+  .btn-clock-inactive {
+    cursor: default;
+    filter: saturate(80%) brightness(80%);
+  }
+  .btn {
+    font-size: 16px;
+    border: none;
+  }
+}
+/* ! BTN - CATEGORIES ------------------------------------ */
+/* ! BTN - CATEGORIES ------------------------------------ */
+/* ! BTN - CATEGORIES ------------------------------------ */
+/* ! BTN - CATEGORIES ------------------------------------ */
+/* ! BTN - CATEGORIES ------------------------------------ */
+
+.btn-null {
+  width: 35px;
+}
+.btn-center {
+  margin: 0 auto;
+}
+
+.btn-block {
+  display: block;
+}
+.btn-fill {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+.btn-transparent {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  overflow: hidden;
+  outline: none;
+}
+/* .btn-short {
+    height: 40px;
+    line-height: 25px;
+} */
+
+.btn-hover-grow:hover {
+  transform: scale(1.05, 1.05);
+  transform-origin: 50% 50%;
+}
+.btn-hover-darken:hover {
+  filter: brightness(80%);
+}
+
+.btn-selected {
+  filter: brightness(150%) saturate(40%);
+}
+.btn-hollow {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn-danger-flat {
+  background-color: hsla(0, 0%, 95%, 0);
+  border: 1px solid hsl(0, 35%, 55%);
+  color: hsl(0, 35%, 55%);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.btn-empty {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+.btn-danger-flat:hover {
+  background-color: hsl(0, 35%, 55%);
+  color: white;
+}
+
+.btn-grey-flat:hover {
+  background-color: hsl(0, 0%, 40%);
+  color: white;
+}
+
+.btn-grey-flat {
+  background-color: hsla(0, 0%, 95%, 0);
+  border: 1px solid hsl(0, 0%, 40%);
+  color: hsl(0, 0%, 40%);
+  font-weight: 700;
+  font-size: 16px;
+}
+.btn-action-flat:hover {
+  background-color: hsl(0, 0%, 55%);
+  color: white;
+}
+
+.btn-action-flat {
+  background-color: hsla(0, 0%, 95%, 0);
+  border: 1px solid hsl(125, 35%, 55%);
+  color: hsl(125, 35%, 55%);
+  font-weight: 700;
+  font-size: 16px;
+}
+.btn-thin {
+  font-weight: 400;
+}
+.btn-highlight {
+  filter: brightness(120%) saturate(70%);
+}
+
+.btn-blue {
+  background-color: var(--accent-blue);
+  color: white;
+}
+
+.btn-blue:hover {
+  filter: brightness(120%);
+}
+
+.btn-blue:hover:disabled {
+  opacity: 0.8;
+  filter: grayscale(80%);
+}
+
+/* .btn-centered {
+    margin: 0 auto;
+}
+
+.width-150 {
+    min-width: 150px;
+    max-width: 150px;
+}
+
+.font-white {
+    color: white;
+}
+
+
+.btn-code {
+    width: 28%;
+    height: 40px;
+}
+
+.btn-wide {
+    width: 80%;
+    font-size: 16px;
+} */
+
+/* .btn {
+
+   height: 25px;
+   width: 40%;
+   border-top: 1px solid #ffffff;
+   border-left: 1px solid #ffffff;
+   border-bottom: 1px solid #000;
+   border-right: 1px solid #000;
+   border-radius: 8px;
+} */
+.btn-code {
+  width: 28%;
+  height: 40px;
+}
+
+.btn-large {
+  font-size: 2.8rem;
+}
+.btn-circle {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  margin: 10px;
+}
+.btn-circle-sm {
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  font-size: 1.1rem;
+  padding: 0;
+  margin: 0;
+}
+.btn-no-margin {
+  padding: 0;
+  margin: 0;
+}
+
+.btn-clear {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+}
+
+.btn-hover-danger:hover {
+  color: hsl(0, 70%, 55%);
+}
+.btn-hover-clipboard:hover {
+  color: var(--clipboard-action-bg);
+}
+.btn-hover-clipboard.highlight {
+  color: var(--clipboard-action-bg);
+}
+.btn-action + .dropdown-toggle {
+  border-left: 1px solid hsl(147, 39%, 60%);
+}
+.btn-admin + .dropdown-toggle {
+  border-left: 1px solid hsl(186, 39%, 60%);
+}
+.btn-danger + .dropdown-toggle {
+  border-left: 1px solid hsl(0, 39%, 60%);
+}
+.btn-blue + .dropdown-toggle {
+  border-left: 1px solid rgb(7, 101, 216);
+}
+.btn-grey + .dropdown-toggle {
+  border-left: 1px solid #a5a5a5;
+}
+.btn-group {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.btn-group > .btn {
+  margin: 2px 0;
+  position: relative;
+  float: left;
+}
+.btn-group > .btn + .dropdown-toggle {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.btn-group > .btn + .btn {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.dropdown-toggle {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 9000;
+  width: fit-content !important;
+  min-width: 180px;
+  display: none;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid hsl(0, 0%, 90%);
+  margin: 0;
+  margin-top: -2px;
+  /* padding: 5px 0; */
+  float: left;
+  font-size: 14px;
+  z-index: 20000;
+  box-shadow: var(--soft-box-shadow);
+  user-select: none;
+}
+
+/* .dropdown-menu-desktop{
+  top: 100%
+} */
+.dropdown-menu-mobile {
+  bottom: 100%;
+  top: revert;
+}
+
+.dropdown-menu.up {
+  top: auto;
+  bottom: 80%;
+}
+
+.dropdown-menu.right {
+  left: auto;
+  right: 0;
+}
+
+.dropdown-menu > ul > li {
+  background-color: hsl(215, 0, 53%);
+}
+.dropdown-menu > .heading {
+  padding-left: 18px;
+  font-weight: 600;
+}
+.dropdown-menu > .heading:hover {
+  background-color: hsla(0, 0%, 0%, 0);
+}
+
+.dropdown-menu > li > a {
+  display: block;
+  padding: 3px 18px;
+  clear: both;
+  color: hsl(0, 0%, 8%);
+  text-decoration: none;
+  font-weight: 400;
+  cursor: pointer;
+  text-align: left;
+}
+.dropdown-menu > li > a:hover {
+  color: hsl(215, 12%, 40%);
+}
+.dropdown-menu > li > a:active {
+  background-color: hsl(215, 12%, 93%);
+}
+
+.btn-group > .dropdown-toggle:hover ~ .dropdown-menu,
+.open > .dropdown-menu {
+  display: block;
+}
+
+.dm-hover:hover {
+  display: block;
+}
+
+.open + .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu .selected {
+  background-color: hsl(198, 20%, 83%);
+}
+.menu-left {
+  right: 0;
+  left: auto;
+}
+.divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+  padding: 0;
+}
+
+.btn-group .right-align {
+  right: 0 !important;
+  left: auto;
+}
+
+.btn-group .left-top-align {
+  right: auto;
+  left: calc(100% + 20px);
+  top: -5px !important;
+}
+
+.btn-grey {
+  background-color: #949494;
+  color: white;
+}
+
+.btn-grey:hover {
+  background-color: hsla(282, 79%, 48%, 1);
+}
+
+.btn-action-selected {
+  background-color: hsla(282, 79%, 48%, 1);
+  color: white;
+  /* background-color: #ffffff; */
+}
+
+.btn-orange {
+  background-color: hsla(19, 82%, 48%, 1);
+}
+.btn-orange:hover {
+  background-color: hsl(19, 82%, 73%);
+}
+
+.btn-admin:hover + .btn-admin {
+  /* background-color: rgb(112, 206, 209); */
+}
+.btn-group .btn-admin:hover + .btn-admin {
+  background-color: rgb(112, 206, 209);
+}
+.btn-action-selected + .dropdown-toggle {
+  border-left: 1px solid hsl(280, 50%, 75%);
+}
+
+.btn-round {
+  border-radius: 30px;
+}
+.btn-caution {
+  background-color: hsla(30, 85%, 55%, 1);
+}
+.btn-caution:hover {
+  background-color: hsla(30, 85%, 65%, 1);
+}
+.btn-schedule-action {
+  background-color: hsla(200, 55%, 40%, 1);
+}
+.btn-schedule-action:hover {
+  background-color: hsla(200, 55%, 50%, 1);
+}
+
+.btn > span {
+  pointer-events: none;
+}
+
+.btn-purple {
+  background-color: hsla(282, 79%, 48%, 1);
+}
+
+.btn-round-ui {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+.btn-inv-gray,
+.btn-inv-grey {
+  background-color: white;
+  color: darkgray;
+  border: 1px solid grey;
+}
+
+.btn-back {
+  font-size: 18px;
+  padding: 12px 24px;
+  border-radius: 3px;
+  padding: 8px 8px;
+  height: fit-content;
+  width: fit-content;
+}
+
+.btn-back:hover {
+  background-color: lightblue;
+  border: 1px solid rgb(57, 100, 114);
+}
+.back-btn {
+  border-radius: 3px;
+  border: 1px solid #999;
+  font-size: 18px;
+  padding: 12px 24px;
+  border-radius: 3px;
+  height: 32px;
+  width: 32px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.back-btn:hover {
+  background-color: hsl(0, 0%, 95%);
+}

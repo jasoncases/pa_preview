@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 865.66 734.39">
+    <defs>
+        <style>
+            .cls-1{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;stroke-width:68.4px;}.cls-2{fill:#000;}
+        </style>
+    </defs>
+    <title>
+        replay icon
+    </title>
+    <circle cx="498.47" cy="367.2" r="333" stroke-dasharray="1700" stroke-dashoffset="0" class="cls-1" transform="rotate(180)" transform-origin="57% 50%"/>
+<!--<rect width="231" height="108.51" x="757.68" y="749.83" class="cls-2" transform="translate(-941.37 584.05) rotate(-45)"/>-->
+    <polygon fill="#FFFFFF" points="660.71 348.94 408.71 203.44 408.71 494.43 660.71 348.94"/>
+    <path fill="#FFFFFF" d="M807.48,797,953.92,649.36c11.88-12,3.39-32.36-13.48-32.36H647.56c-16.88,0-25.37,20.37-13.48,32.36L780.52,797A19,19,0,0,0,807.48,797Z" transform="translate(-628.54 -268.89)"/>
+</svg>

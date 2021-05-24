@@ -1,0 +1,92 @@
+
+.huddle-container {
+    margin: 8% auto;
+    height: 80%;
+    width: 80%;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 45% auto 45%;
+    grid-template-rows: 1fr;
+    grid-template-areas: 'huddle . edit';
+    flex-direction: row;
+    justify-content: space-between;
+ }
+ 
+ .huddle-display {
+    grid-area: huddle;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+ }
+ 
+ .huddle-row {
+    display: flex;
+    flex-direction: row;
+    /* background-color: blue; */
+    border-bottom: 1px solid black;
+    height: 9%;
+    width: 100%;
+ }
+ .huddle-heading {
+    width: 40%;
+    height: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    word-wrap: break-word;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+ }
+ .huddle-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 14px;
+    color: black;
+    height: 100%;
+    width: 60%;
+    background-color: grey;
+    text-align: center;
+ }
+ .hc-wide {
+    flex: 1;
+    background: white;
+ }
+ .huddle-edit {
+    grid-area: edit;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+ }
+ @media (max-width: 750px) {
+    .huddle-container {
+       height: 100%;
+       max-width: 750px;
+       width: 100%;
+       margin: 0;
+       padding: 0;
+       display: grid;
+       grid-template-columns: 1fr;
+       grid-template-rows: 1fr;
+       grid-template-areas: 'huddle';
+    }
+    .huddle-edit {
+       display: none;
+    }
+    .huddle-row {
+       display: flex;
+       flex-direction: row;
+       /* background-color: blue; */
+       border-bottom: 1px solid black;
+       height: 9%;
+       min-height: 65px;
+       width: 100%;
+    }
+ }
+ 

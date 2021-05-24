@@ -1,0 +1,294 @@
+/*  ***********************FULL SIZED **************************************************/
+
+.container {
+   height: 100%;
+   width: 95%;
+   display: grid;
+   margin: 0 auto;
+   grid-template-columns: 215px auto;
+   grid-template-rows: 70px auto;
+}
+
+.sidebar {
+   grid-column: 1/2;
+   grid-row: 1/-1;
+   background-color: var(--sidebar-bg);
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+}
+
+/* .expand {
+  grid-column: 2/3;
+  grid-row: 1/-1;
+  background-color: rgb(113, 158, 196);
+} */
+
+.content {
+   grid-column: 2/-1;
+   grid-row: 1/-1;
+   background-color: rgb(251, 250, 246);
+}
+
+.header {
+   height: 70px;
+   width: 100%;
+   background-color: white;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+
+.logo {
+   height: 95%;
+   width: 95%;
+   margin: 1px auto;
+}
+
+.user-info {
+   height: 175px;
+   width: 95%;
+   margin: 8px auto;
+   background-color: rgb(173, 217, 238);
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-content: center;
+   /* border: 1px solid white; */
+}
+
+.login-label {
+   display: block;
+   font-size: 1.2rem;
+   letter-spacing: 3px;
+   /* color: white; */
+   font-weight: bold;
+}
+
+.input-text {
+   width: 90%;
+   height: 2.2rem;
+   margin: 0 auto;
+}
+
+.link {
+   display: block;
+}
+
+.sub-link {
+   font-size: 1.1rem;
+}
+
+/*  ! END GRID COMPONENTS -------------------------------------------------------------- */
+
+.link-menu {
+   height: 40px;
+   width: 100%;
+   color: white;
+   font-weight: bold;
+   text-align: left;
+   padding-left: 22px;
+   line-height: 40px;
+   background-color: var(--sidebar-bg);
+   box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+}
+.link-menu:hover {
+   background-color: rgb(40, 87, 109);
+}
+.link-menu:active {
+   background-color: rgb(60, 99, 117);
+}
+.link-inactive {
+   color: rgb(77, 122, 143);
+}
+
+/*  ! BEGIN USER INFO COMPONENTS ------------------------------------------------------ */
+
+.profile-heading {
+   flex: 2;
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   /* border: 1px solid green; */
+}
+.profile-pic {
+   height: 50px;
+   width: 50px;
+   min-width: 50px !important;
+   min-height: 50px !important;
+   display: inline-block;
+   background-color: rgb(194, 25, 25);
+   color: white;
+   border-radius: 29px;
+   overflow: hidden;
+   border: 2px solid black;
+   line-height: 42px;
+   font-size: 3rem;
+   font-weight: bold;
+   text-align: center;
+   margin: 5px;
+   transform: rotate(15deg);
+}
+.profile-username {
+   height: 50px;
+   display: inline-block;
+   margin: 5px;
+   font-size: 1.8rem;
+   text-align: left;
+   font-weight: bold;
+   line-height: 50px;
+   /* border: 1px solid black; */
+}
+.profile-subtext {
+   height: 1.5rem;
+   flex: 1;
+   font-size: 1rem;
+   font-style: italic;
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-end;
+   align-content: center;
+   border: 1px solid black;
+}
+.profile-quicklinks {
+   flex: 2;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-content: center;
+   text-align: center;
+   margin: 10px auto;
+   height: 80%;
+   width: 90%;
+   border: 1px solid navy;
+   background-color: rgb(103, 197, 251);
+   font-size: 1.5rem;
+}
+.quick-link {
+   font-size: 1.22rem;
+   font-weight: bold;
+   color: white;
+}
+.profile-btn-container {
+   flex: 1;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+}
+.profile-quicklinks-list {
+   list-style-type: none;
+   padding: 0;
+}
+
+/*  ! END USER INFO COMPONENTS --------------------------------------------------------- */
+
+/*  ! BEGIN CONTENT FLEXBOX  COMPONENTS ----------------------------------------------------------- */
+
+.content-container {
+   height: 100%;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   /* background-color: rgb(242, 242, 242); */
+   border-bottom: 1px solid black;
+   border-radius: -15px;
+}
+
+.content-header-text {
+   font-size: 2.8rem;
+   color: var(--black);
+}
+
+.content-header {
+   height: 70px !important;
+   min-height: 70px !important;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 500;
+   width: 100%;
+   display: flex;
+   letter-spacing: 0.4rem;
+   text-shadow: 2px 2px 6px rgb(148, 148, 148);
+   line-height: 8rem;
+   flex-direction: row;
+   justify-content: flex-start;
+   padding-left: 30px;
+   background: #f5f5f5; /* Old browsers */
+   /* background: -moz-linear-gradient(left, #a5a5a5 0%, #f1f1f1 1%, #f1f1f1 99%, #f1f1f1 99%, #a5a5a5 100%); 
+  background: -webkit-linear-gradient(left, #a5a5a5 0%,#f1f1f1 1%,#f1f1f1 99%,#f1f1f1 99%,#a5a5a5 100%); 
+  background: linear-gradient(to right, #a5a5a5 0%,#f1f1f1 1%,#f1f1f1 99%,#f1f1f1 99%,#a5a5a5 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a5a5a5', endColorstr='#a5a5a5',GradientType=1 ); */
+   -moz-box-shadow: 0px 24px 3px -24px #444444;
+   -webkit-box-shadow: 0px 24px 3px -24px #444444;
+   box-shadow: 0px 24px 3px -24px #444444;
+   z-index: 5;
+}
+
+.content-submenu {
+   height: 2.8rem;
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   line-height: 2.4rem;
+   z-index: 3;
+   -moz-box-shadow: 0px 24px 3px -24px #444444;
+   -webkit-box-shadow: 0px 24px 3px -24px #444444;
+   box-shadow: 0px 24px 3px -24px #444444;
+   background: #f5f5f5; /* Old browsers */
+   /* background: -moz-linear-gradient(left, #a5a5a5 0%, #f1f1f1 1%, #f1f1f1 99%, #f1f1f1 99%, #a5a5a5 100%); /* FF3.6-15 
+  background: -webkit-linear-gradient(left, #a5a5a5 0%,#f1f1f1 1%,#f1f1f1 99%,#f1f1f1 99%,#a5a5a5 100%); /* Chrome10-25,Safari5.1-6 
+  background: linear-gradient(to right, #a5a5a5 0%,#f1f1f1 1%,#f1f1f1 99%,#f1f1f1 99%,#a5a5a5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a5a5a5', endColorstr='#a5a5a5',GradientType=1 ); IE6-9 */
+}
+
+.content-content {
+   height: 100%;
+   width: 100%;
+   z-index: 1;
+   background: #f5f5f5; /* Old browsers */
+   /* background: -moz-linear-gradient(left, #a5a5a5 0%, #f1f1f1 1%, #f1f1f1 99%, #f1f1f1 99%, #a5a5a5 100%); /* FF3.6-15 
+  background: -webkit-linear-gradient(left, #a5a5a5 0%,#f1f1f1 1%,#f1f1f1 99%,#f1f1f1 99%,#a5a5a5 100%); /* Chrome10-25,Safari5.1-6 
+  background: linear-gradient(to right, #a5a5a5 0%,#f1f1f1 1%,#f1f1f1 99%,#f1f1f1 99%,#a5a5a5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a5a5a5', endColorstr='#a5a5a5',GradientType=1 ); IE6-9 */
+   padding: 12px 20px;
+
+   font-size: 1.4rem;
+}
+
+/*  ! END CONTENT FLEXBOX COMPONENTS ----------------------------------------------------------- */
+
+/*  ! BEGIN CONTENT GRID COMPONENTS ----------------------------------------------------------- */
+
+/*  ! END CONTENT GRID COMPONENTS ----------------------------------------------------------- */
+
+/*  ! BEGIN GRID COMPONENTS ----------------------------------------------------------- */
+
+/*  ! BEGIN GRID COMPONENTS ----------------------------------------------------------- */
+
+/*  ! BEGIN GRID COMPONENTS ----------------------------------------------------------- */
+
+/*  ! BEGIN GRID COMPONENTS ----------------------------------------------------------- */
+
+/*  ! BEGIN GRID COMPONENTS ----------------------------------------------------------- */
+
+/*  ! BEGIN GRID COMPONENTS ----------------------------------------------------------- */
+
+/*  ! BEGIN GRID COMPONENTS ----------------------------------------------------------- */
+
+/*  ! BEGIN GRID COMPONENTS ----------------------------------------------------------- */
+
+/*  ! BEGIN GRID COMPONENTS ----------------------------------------------------------- */
+
+/*  ! BEGIN GRID COMPONENTS ----------------------------------------------------------- */
+
+/*  ! BEGIN GRID COMPONENTS ----------------------------------------------------------- */
+
+/*  ! BEGIN GRID COMPONENTS ----------------------------------------------------------- */
+
+/*  ! BEGIN GRID COMPONENTS ----------------------------------------------------------- */
+
+/*  ! BEGIN GRID COMPONENTS ----------------------------------------------------------- */
+
+/*  ! BEGIN GRID COMPONENTS ----------------------------------------------------------- */

@@ -1,0 +1,148 @@
+.manager-ui {
+    display: inline;
+ }
+ .form-container {
+    margin: auto;
+    border: 1px solid #000;
+    height: 85%;
+    width: 85%;
+ }
+ .whiteboard-container {
+    height: 95%;
+    width: 95%;
+    margin: auto;
+ 
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 7px;
+    touch-action: none;
+ }
+ 
+ .draggable {
+    list-style: none;
+    line-height: 25px;
+    text-align: center;
+    width: 175px;
+    height: 25px;
+    font-size: 12px;
+    background: rgb(99, 196, 235);
+    border-top: 1px solid rgb(141, 141, 141);
+    border-left: 1px solid rgb(141, 141, 141);
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-radius: 7px;
+    user-select: none;
+    touch-action: none;
+    box-shadow: 2px 2px 5px grey;
+    z-index: 10;
+ }
+ [id^='task-object_']:active {
+    height: 40px;
+    z-index: 20;
+    line-height: 40px;
+    background: rgb(130, 213, 247);
+    overflow: hidden;
+ }
+ .task-div {
+    pointer-events: none;
+    height: 40px;
+ }
+ .inner-left {
+    font-weight: bold;
+    text-align: left;
+    text-shadow: 2px 2px 5px #fff;
+    position: relative;
+    float: left;
+    margin-left: 8px;
+    width: 60%;
+    height: 100%;
+    overflow: hidden;
+    word-break: break-all;
+    pointer-events: none;
+ }
+ .inner-right {
+    position: relative;
+    float: right;
+    text-shadow: 2px 2px 5px #fff;
+    font-weight: bold;
+    margin-right: 15px;
+    height: 100%;
+    overflow: hidden;
+    color: hsl(219, 94%, 27%);
+    border-left: 1px solid rgb(54, 92, 107);
+    border-right: 1px solid rgb(54, 92, 107);
+    background-color: #ffa88f;
+    width: 25%;
+    pointer-events: none;
+ }
+ .task-launcher {
+    display: flex;
+    flex-flow: column;
+    height: 50%;
+    width: 99%;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid #000;
+ }
+ div[id^='employee-node'] {
+    border-radius: 10px;
+    height: 284px;
+    width: 205px;
+    border: 1px solid #000;
+    background-color: #4b9fcd;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px grey;
+    z-index: 0;
+ }
+ .employee-header {
+    font-weight: bold;
+    height: 32px;
+    border-bottom: 1px solid #000;
+    background-color: #1d84bc;
+    line-height: 32px;
+    font-size: 12px;
+    color: #000;
+    user-select: none;
+    touch-action: none;
+    padding-left: 5px;
+    z-index: 0;
+ }
+ .employee-content {
+    border-top: 1px solid #dbeef9;
+    height: 250px;
+    align-content: center;
+    background-color: #84c1e2;
+    z-index: 0;
+ }
+ .employee-list {
+    height: 250px;
+    border: 1px solid #000;
+    padding-inline-start: 12px;
+    z-index: 0;
+ }
+ .employee-list li {
+    margin-bottom: 3px;
+    z-index: 0;
+ }
+ .sortable {
+    list-style: none;
+    line-height: 25px;
+    text-align: center;
+    width: 175px;
+    height: 25px;
+    font-size: 12px;
+    background: rgb(99, 196, 235);
+    border-top: 1px solid rgb(141, 141, 141);
+    border-left: 1px solid rgb(141, 141, 141);
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-radius: 7px;
+    user-select: none;
+    touch-action: none;
+    box-shadow: 2px 2px 5px grey;
+    z-index: 10;
+ }
+ 

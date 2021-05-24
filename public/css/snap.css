@@ -1,0 +1,273 @@
+.snap-container {
+  height: calc(85vh - 45px);
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 12px;
+  background-color: gray;
+  z-index: 5000;
+  border-radius: 5px;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,f1f1f1+50,e1e1e1+51,f6f6f6+100;White+Gloss+%231 */
+  background: rgb(255, 255, 255); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(245, 245, 245, 1) 0%, rgba(241, 241, 241, 1) 50%, rgba(225, 225, 225, 1) 51%, rgba(246, 246, 246, 1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(245, 245, 245, 1) 0%, rgba(241, 241, 241, 1) 50%, rgba(225, 225, 225, 1) 51%, rgba(246, 246, 246, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    rgba(245, 245, 245, 1) 0%,
+    rgba(241, 241, 241, 1) 50%,
+    rgba(225, 225, 225, 1) 51%,
+    rgba(246, 246, 246, 1) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 ); /* IE6-9 */
+  border: 1px solid darkgray;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  /* box-shadow: 1px 4px hsla(0, 0%, 0%, 0.15); */
+  position: absolute;
+  top: 75px;
+  left: calc(100% - 285px);
+  transform: translateX(400px);
+  transition: transform 0.25s;
+  overflow: hidden;
+}
+.snap-container:hover {
+  overflow-y: auto;
+}
+.snap-animate-in {
+  transform: translateX(0);
+}
+.snap-datepicker {
+  height: 75px;
+  width: 100%;
+  background-color: blue;
+}
+.snap-detail-container {
+  border-radius: 3px;
+  display: flex;
+  width: 100%;
+  margin-top: 15px;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: lightgray;
+  border: 1px solid darkgray;
+  overflow: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  height: auto;
+  margin-bottom: 20px;
+  z-index: 100;
+}
+.snap-detail-container::-webkit-scrollbar {
+  width: 0;
+}
+.snap-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 8px;
+  font-size: 16px;
+  min-height: fit-content;
+  color: black;
+}
+.snap-row-item {
+  height: auto;
+  pointer-events: none;
+}
+.snap-status {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 0;
+}
+.snap-status-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 3px;
+  text-transform: capitalize;
+}
+.snap-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.flex-1 {
+  flex: 1;
+}
+.snap-badge {
+  height: 22px;
+  width: 15px;
+  align-self: flex-end;
+  margin: 3px 5px;
+}
+.lunch-border {
+  border: 2px solid yellow;
+  background-color: hsl(120, 50%, 35%);
+  border-radius: 2px;
+}
+.break-border {
+  border: 2px solid orange;
+  background-color: hsl(120, 50%, 35%);
+  border-radius: 2px;
+}
+.lunch {
+  background-color: yellow;
+}
+.break {
+  background-color: orange;
+}
+
+.snap-edit-details {
+  padding-left: 8px;
+  flex-direction: column;
+}
+.snap-edit {
+  background-color: rgb(228, 178, 85) !important;
+  border-left: 1px solid darkgrey;
+  border-right: 1px solid darkgrey;
+}
+.snap-row-sub-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: black;
+  text-transform: uppercase;
+}
+.snap-row-sub-row:first-child {
+  border-bottom: 1px solid darkgray;
+}
+.snap-row-sub-row:nth-child(even) {
+  background-color: rgb(192, 192, 192);
+}
+.snap-row-sub-item {
+  width: 32%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6px 2px;
+}
+.snap-row-sub-item > select {
+  margin: 3px auto;
+  padding: 3px;
+}
+.snap-checkbox {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+.snap-slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: rgb(175, 175, 175);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.snap-slider::before {
+  position: absolute;
+  content: '';
+  height: 8px !important;
+  width: 20px !important;
+  background-color: white;
+  border: 1px solid black;
+  overflow: hidden;
+  user-select: none;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 18px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(175, 175, 175);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 10px;
+  width: 10px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: rgb(54, 150, 54);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px rgb(87, 190, 78);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.snap-label {
+  font-size: 1.2rem;
+  color: black;
+}
+.snap-input {
+  font-size: 1.2rem !important;
+  height: fit-content !important;
+}
+.snap-active {
+  background-color: #00cc33;
+  color: black;
+}
+.snap-break {
+  background-color: orange;
+}
+.snap-lunch {
+  background-color: yellow;
+}
+.snap-pulse {
+  animation: pulse 0.5s;
+  animation-iteration-count: infinite;
+}
+.add-pointer-events {
+  pointer-events: all;
+}
+
+.snap-calendar-container {
+  width: 100%;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  z-index: 200;
+}

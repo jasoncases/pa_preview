@@ -1,0 +1,170 @@
+:root {
+  --repeat-modal-height: 330px;
+  --repeat-modal-width: 500px;
+}
+
+.task-add__container {
+  display: grid;
+  width: 60%;
+  max-width: 850px;
+  margin: 10px auto;
+  grid-gap: var(--grid-gap);
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 50px repeat(7, auto);
+
+  /* Fleshed out layout a bit more (removed needless attach section and replaced with "." which is just a empty space place holder*/
+  grid-template-areas:
+    'back back back back back back'
+    'meta meta meta meta meta meta'
+    'title title title priority priority priority'
+    'cat cat cat subs subs subs'
+    'assignee assignee assignee . . .'
+    'text text text text text text'
+    'file file submit submit . .';
+}
+/* Moved Toggle buttons and Date Picker as to not interfere with mobile layout */
+/* ADDED TOGGLE SWITCHES FORE NOTIFY MANAGER AND IS REQUIRED */
+.notify_manager {
+  grid-area: notify_manager;
+}
+.is_required_for_clockout {
+  grid-area: is_required_for_clockout;
+  justify-self: flex-end;
+}
+
+/* ADDED TOGGLE SWITCH FOR DEADLINE REMINDER */
+.deadline_reminder {
+  grid-area: deadline_reminder;
+  justify-self: flex-start;
+}
+/* DATE TIME PICKER INPUT */
+.deadline-date-picked {
+  grid-area: deadline-date-picked;
+  justify-self: flex-end;
+}
+.scheduled_start {
+  /* grid-area: scheduled_start; */
+  justify-self: flex-start;
+}
+.scheduled_date_picked {
+  grid-area: scheduled_date_picked;
+  justify-self: flex-end;
+}
+.task-select {
+  padding: 4px 30px 4px 10px;
+}
+
+.fa-bell {
+  color: orange;
+  font-size: 2rem;
+}
+
+.reminder-btn-disabled > .fa-bell {
+  color: var(--text-lightgrey);
+}
+.dropdown-menu {
+  min-width: 200px;
+}
+.countdown-display {
+  display: grid;
+}
+.reminder-countdown {
+  grid-column-start: 2;
+  padding-left: 24px;
+}
+.reminder-countdown-spacing {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.countdown-spacing {
+  /* position: relative; */
+  padding-left: 30px;
+}
+.countdown-pdr {
+  padding-left: 6px;
+}
+
+.task-priority {
+  grid-area: priority;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.task-priority label {
+  margin: 4px 5px 2px 5px;
+}
+
+
+.repeating-modal__generate {
+  background-color: white;
+  position: absolute;
+  top: calc(50% - var(--repeat-modal-height)/2);
+  left: calc(50% - var(--repeat-modal-width)/2);
+  height: var(--repeat-modal-height);
+  width: var(--repeat-modal-width);
+  border-radius: 3px;
+  border: 1px solid hsla(0, 0%, 91%);
+  box-shadow: var(--soft-box-shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 8px;
+  z-index: 13000;
+}
+
+.repeating-modal__generate .modal-input {
+  width: 310px;
+  margin: 2px 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+@media (max-width: 825px) {
+  .task-add__container {
+    display: grid;
+    width: 95%;
+    margin: 10px auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50px repeat(9, auto);
+    /* grid-row-gap: 4px; */
+    grid-row-gap: 1rem;
+    grid-template-areas:
+      'back back'
+      'title title'
+      'priority priority'
+      'cat cat'
+      'subs subs'
+      'assignee assignee'
+      'text text'
+      'file file'
+      'submit submit';
+  }
+  .notify_manager {
+    /* justify-self: center; */
+    padding-left: var(--padding-left-align_mobile);
+  }
+
+  .is_required_for_clockout {
+    justify-self: flex-start;
+    /* justify-self: center; */
+    padding-left: var(--padding-left-align_mobile);
+  }
+  .scheduled_start {
+    /* justify-self: center; */
+    padding-left: var(--padding-left-align_mobile);
+  }
+  .scheduled_date_picked {
+    /* justify-self: center; */
+    justify-self: flex-start;
+    width: 100%;
+  }
+  .deadline_reminder {
+    /* justify-self: center; */
+    padding-left: var(--padding-left-align_mobile);
+  }
+  .deadline-date-picked {
+    justify-self: flex-start;
+    width: 100%;
+  }
+}

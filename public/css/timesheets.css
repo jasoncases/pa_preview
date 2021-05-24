@@ -1,0 +1,722 @@
+:root {
+  --ts-bgColor: rgb(228, 228, 228);
+  --grid-line-color: rgb(0, 0, 0);
+  --grid-line-dark: rgb(139, 139, 139);
+  --grid-line-light: rgb(216, 216, 216);
+}
+.timesheet-container {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: 1fr 80px repeat(7, 1fr);
+}
+
+.login-container {
+  grid-area: login;
+  /* min-height: 100px;
+    min-width: 100px; */
+  background-color: rgb(228, 228, 228);
+  grid-row: 2/3;
+  grid-column: 2/9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid black; */
+}
+
+/* .sched {
+   grid-area: sched;
+} */
+.work-timer {
+  position: absolute;
+  left: 33%;
+  width: 33%;
+  height: 90%;
+  top: 5%;
+  z-index: 500;
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 2.8rem;
+}
+.custom-work-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between !important;
+  background-color: rgb(245, 245, 245);
+  flex-wrap: wrap;
+  height: 45% !important;
+  width: auto;
+  margin: 0 auto;
+  padding: 10px;
+  overflow-y: auto;
+  position: relative;
+}
+.custom-work-item {
+  margin: 10px;
+}
+.login-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  height: fit-content;
+  line-height: 70px;
+  align-content: center;
+  font-size: 2rem;
+  margin: 5px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+/* .data-container {
+    /* min-height: 500px; 
+    grid-area: data;
+    grid-row: 4/9;
+    grid-column: 2/9;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+} */
+
+.rt {
+  text-align: right;
+}
+.cntr {
+  margin: 0 auto;
+}
+
+.activity-container {
+  height: 100%;
+  display: flex;
+  grid-row: 4/9;
+  grid-column: 2/6;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+  background-color: var(--ts-bgColor);
+  border-right: 1px solid grey;
+}
+.activity-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  line-height: 35px;
+  width: 100%;
+  height: 30px;
+  background-color: rgb(224, 222, 222);
+  font-weight: bold;
+}
+.activity-wrapper {
+  display: flex;
+  flex: 1;
+  min-height: 0px;
+  overflow: auto;
+}
+.activity-body {
+  /* display: block; */
+  height: fit-content;
+  width: 100%;
+
+  /* overflow: scroll; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.subtext {
+  font-size: 1rem;
+}
+.act-head-item-lt {
+  font-size: 1.2rem;
+  width: 25%;
+  flex: 1;
+  text-align: left;
+  margin-left: 10px;
+}
+.act-head-item-rt {
+  font-size: 1.2rem;
+  width: 25%;
+  flex: 1;
+  text-align: right;
+  margin-right: 10px;
+}
+.act-head-item {
+  font-size: 1.2rem;
+  width: 25%;
+  flex: 2;
+  text-align: center;
+}
+.act-item {
+  font-size: 1.2rem;
+  width: 25%;
+  flex: 2;
+  text-align: center;
+}
+.act-item-rt {
+  font-size: 1.2rem;
+  width: 25%;
+  flex: 1;
+  text-align: right;
+  margin-right: 10px;
+}
+.act-item-lt {
+  font-size: 1.2rem;
+  width: 25%;
+  flex: 1;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.summary {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  display: block;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.time-off-container {
+  grid-row: 4/9;
+  grid-column: 6/9;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--ts-bgColor);
+  justify-content: space-evenly;
+}
+.rt-div-line {
+  border-right: 1px solid grey;
+}
+.activity-current {
+  flex: 1;
+  display: flex;
+}
+.to-header {
+  width: 100%;
+  font-weight: bold;
+  flex: 1;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  background-color: #dbd9d9;
+  line-height: 40px;
+}
+.to-row {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.pto {
+  border-bottom: 1px solid grey;
+}
+.rt-al {
+  justify-content: flex-end;
+  flex: 2;
+  width: 30%;
+}
+.lt-al {
+  flex: 1;
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+.hrs {
+  flex-grow: 2;
+}
+.pto {
+  flex: 1;
+  border-top: 1px solid grey;
+}
+.upto {
+  flex: 1;
+}
+.requests {
+  flex: 1;
+}
+.tardies {
+  flex: 1;
+}
+.to-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  font-size: 2rem;
+  flex: 2;
+  line-height: 30px;
+  height: 20px;
+}
+.iframe {
+  margin: 0 auto;
+  height: 80%;
+  max-height: 240px;
+  width: 90%;
+  max-width: 490px;
+}
+.countdown {
+  flex: 2;
+  border-top: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.to-sub-item {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.2rem;
+  text-align: right;
+}
+.to-sub-footer {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.2rem;
+  text-align: right;
+  font-weight: bold;
+  border-top: 1px solid black;
+}
+.payroll-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 20px;
+  line-height: 20px;
+  width: 100%;
+}
+.minimized-menu {
+  display: none;
+}
+.login-popup {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 2rem;
+  height: 40%;
+  min-height: 475px;
+  width: 20%;
+  min-width: 325px;
+  top: 20%;
+  left: 40%;
+  background-color: lightblue;
+  border-radius: 8px;
+  /* box-shadow: 1px 1px 7px black; */
+}
+.login-input {
+  font-size: 2rem;
+  width: 85%;
+  margin: 0 auto;
+}
+.time-off-container-button {
+  display: none;
+}
+/* ! MEDIA QUERY FOR TIMESHEETS MAIN PAGE */
+
+.breaktimer-container__index {
+  margin: 50px auto;
+}
+.animate-me {
+  margin: 0 auto 24px auto;
+  width: 500px;
+  width: 100% !important;
+  padding: 0;
+  max-height: 240px;
+  max-width: 490px;
+}
+.timer-container .animate-me {
+  margin: 0 auto;
+}
+.alert-1 {
+  background-color: hsl(350, 100%, 50%, 0.25);
+}
+.alert-2 {
+  background-color: hsl(350, 100%, 50%, 0.5);
+}
+.alert-3 {
+  background-color: hsl(350, 100%, 50%, 0.75);
+}
+.alert-4 {
+  background-color: hsl(350, 100%, 50%, 1);
+}
+
+@media (max-width: 750px) {
+  .timesheet-container {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--ts-bgColor);
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 30px repeat(12, 1fr);
+    /* grid-template-areas: 
+        'sb header header header header header header header header rsb'
+        'sb login login login login login login login rsb'
+        'sb sched sched sched sched sched sched sched rsb'
+        'sb data data data data data data data rsb'
+        'sb data data data data data data data rsb'
+        'sb data data data data data data data rsb'
+        'sb data data data data data data data rsb'
+        'sb data data data data data data data rsb'
+        'sb footer footer footer footer footer footer footer rsb'; */
+  }
+
+  /* .header {
+      display: inline-block;
+      grid-row: 1/2;
+      grid-column: 1/9;
+      line-height: 30px;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+   } */
+  .login-container {
+    font-size: 1.5rem;
+    min-width: 325px;
+    grid-column: 1/9;
+    grid-row: 1/3;
+    min-height: auto;
+  }
+  .login-item {
+    font-size: 1.6rem;
+    line-height: 4rem;
+    margin: 4px 0;
+    height: 100%;
+  }
+  .activity-container {
+    margin-top: 7px;
+    grid-row: 3/-1;
+    grid-column: 1/9;
+    overflow: auto;
+    font-size: 1rem;
+    min-width: 325px;
+    display: flex;
+    flex-direction: column;
+  }
+  .time-off-container {
+    height: 80%;
+    width: 100%;
+    top: 20%;
+    left: 0px;
+    position: absolute;
+    z-index: 500;
+    display: flex;
+    animation: tocont-grow 0.56s ease-in-out;
+  }
+  .header {
+    font-size: 1.2rem;
+  }
+  .to-sub-item {
+    font-size: 1rem;
+  }
+  .time-off-container-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    background-color: rgb(156, 156, 156);
+    z-index: 500;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+  }
+  @keyframes tocont-grow {
+    0% {
+      /* transform: scale(0,0); */
+      transform: translateY(800px);
+      /* transform-origin: bottom; */
+    }
+    100% {
+      transform: translateY(0);
+      /* transform: translateY(1,1); */
+    }
+  }
+  .vanish {
+    display: none;
+  }
+  .summary {
+    font-size: 1.3rem;
+  }
+  .login-popup {
+    display: none;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 2rem;
+    height: 50%;
+    width: 90%;
+    top: 10%;
+    left: 5%;
+    background-color: lightblue;
+  }
+  .act-head-item-lt {
+    min-width: 95px;
+  }
+  .act-item-lt {
+    min-width: 95px;
+  }
+  /* .cascade-container {
+      margin-top: 20px;
+      display: none;
+      min-height: fit-content;
+      height: fit-content;
+      background-color: rgb(197, 197, 197);
+      flex-direction: column;
+      justify-content: flex-end;
+      align-content: flex-end;
+      position: relative;
+      /* border: 1px solid black; */
+
+  /* max-width: 92% !important; */
+  /* } */
+  .hrs {
+    flex-grow: 2;
+  }
+  .pto {
+    flex: 1;
+  }
+  .upto {
+    flex: 1;
+  }
+  .requests {
+    flex: 1;
+  }
+  .tardies {
+    flex: 1;
+  }
+}
+
+/* ! BEGIN CSS FOR TIMESHEETS REPORTING */
+
+.report-container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(10, 5px 1fr) 5px;
+  grid-template-rows: repeat(10, 5px 1fr) 5px;
+}
+.report-heading {
+  grid-column: 2/21;
+  grid-row: 2/3;
+  background-color: rgb(238, 236, 227);
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-content: flex-end;
+}
+.rpt-heading-text {
+  margin-left: 25px;
+  margin-bottom: 12px;
+  font-size: 4rem;
+  color: rgb(53, 96, 114);
+  font-weight: bold;
+  text-align: left;
+}
+.report-search-panel {
+  grid-column: 2/21;
+  grid-row: 4/7;
+  display: flex;
+  flex-direction: row;
+}
+.report-output-container {
+  grid-column: 2/21;
+  grid-row: 8/21;
+  overflow: auto;
+}
+.gradient-bg {
+  border-top: 1px solid darkgrey;
+  border-bottom: 2px solid grey;
+  background: #ededed; /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    #ededed 0%,
+    #ffffff 4%,
+    #ededed 58%,
+    #f3f3f3 91%,
+    #ffffff 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    #ededed 0%,
+    #ffffff 4%,
+    #ededed 58%,
+    #f3f3f3 91%,
+    #ffffff 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #ededed 0%,
+    #ffffff 4%,
+    #ededed 58%,
+    #f3f3f3 91%,
+    #ffffff 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+.rpt-search-container {
+  height: 100%;
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+}
+
+.search-panel-lt {
+  width: 40%;
+  min-width: 400px;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.search-panel-rt {
+  width: 30%;
+  min-width: 400px;
+  height: 100%;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px dashed grey;
+}
+.splash-container {
+  display: flex;
+  min-width: 650px;
+  flex-direction: column;
+  text-align: center;
+  justify-content: flex-start;
+  align-content: center;
+  height: 100%;
+}
+.btn-report {
+  font-size: 1.8rem;
+  cursor: pointer;
+  margin: 3px;
+  padding: 8px;
+  user-select: none;
+  background: rgb(36, 136, 69);
+  border: 1px solid rgb(25, 92, 47);
+  box-shadow: 4px 4px 8px rgb(184, 184, 184);
+  color: white;
+}
+.btn-report:hover {
+  background: rgb(62, 148, 90);
+  box-shadow: 4px 4px 8px rgb(184, 184, 184);
+}
+.btn-report:active {
+  transform: scale(0.97, 0.95);
+  background: rgb(62, 148, 90);
+  box-shadow: 2px 2px 4px rgb(184, 184, 184);
+}
+.btn-report:focus {
+  outline: none;
+}
+.rpt-output-heading {
+  height: 30px;
+  line-height: 35px;
+  width: 98%;
+  margin: 0 auto;
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(53, 96, 114);
+  border-bottom: 0.5px solid grey;
+}
+.rpt-headers {
+  background: rgb(53, 96, 114);
+  width: 98%;
+  /* font-weight: bold; */
+  color: white;
+  margin: 0 auto;
+  height: 3rem;
+  line-height: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 1.8rem;
+}
+.splash-header {
+  height: 3rem;
+  font-size: 2rem;
+  line-height: 3.5rem;
+  width: 95%;
+  margin: 0 auto;
+  border-bottom: 1px solid grey;
+}
+.splash-content {
+  width: 95%;
+  min-width: 630px;
+  margin: 0 auto;
+  background: black;
+  height: 80%;
+  border: 1px solid lightgrey;
+  background: rgb(231, 246, 252);
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+}
+.row-1 {
+  border-top: 1px solid rgb(181, 198, 204);
+  height: 3rem;
+  width: 98%;
+  margin: 0 auto;
+  background: rgb(231, 246, 252);
+}
+.row-2 {
+  border-top: 1px solid rgb(181, 198, 204);
+  height: 3rem;
+  width: 98%;
+  margin: 0 auto;
+  background: rgb(214, 234, 241);
+}
+.row-3 {
+  border-top: 1px solid rgb(181, 198, 204);
+  height: 3rem;
+  width: 98%;
+  margin: 0 auto;
+  background: rgb(210, 236, 245);
+}
+.status-text {
+  font-size: 1.2rem;
+}
+.status-container {
+  font-weight: none;
+  text-transform: uppercase !important;
+}
+/* Media QUERIES need to start adjusting the payroll report page at < 1100 px width. */
+
+/* END Media Queries for payroll report */
+.dev {
+  background-color: lightcoral;
+}
+
+.clockedin {
+  background-color: #00cc33;
+}
+.clockedout {
+  background-color: rgb(236, 56, 32);
+}
+.onbreak {
+  background-color: rgb(241, 158, 32);
+}
+.onlunch {
+  background-color: rgb(236, 233, 48);
+}

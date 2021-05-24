@@ -1,0 +1,572 @@
+.va-wrapper {
+  height: 100%;
+  width: 100%;
+  /* background-color: #BB0000; */
+}
+.va-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.va-page-heading {
+  height: 3.2rem;
+  width: 100%;
+  background-color: #009688;
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.va-page-heading-item {
+  margin: 0 5px;
+}
+.va-voice-container {
+  margin: 18px;
+  width: 65%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+    0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+.va-voice-sidebar {
+  width: 325px;
+  margin: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.va-voice-component {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  height: auto;
+  width: 100%;
+  min-width: 325px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+    0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  margin: 5px;
+}
+@media (max-width: 700px) {
+  .va-voice-component {
+    display: none;
+  }
+}
+.va-sidebar-content {
+  width: 100%;
+  height: 375px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 5px 12px;
+}
+.va-pill-container {
+  width: 100%;
+  overflow: auto;
+}
+.va-pill {
+  /* width: 100%; */
+}
+.va-queue-instant {
+  height: 40vh;
+}
+
+.va-vc-row {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  overflow: hidden;
+  /* transform: scaleY(1); */
+  height: auto;
+  max-height: 0px;
+  transition: max-height 0.25s ease-in;
+  /* transform-origin: top; */
+}
+
+.va-vc-header {
+  background-color: hsl(210, 65%, 40%);
+  border-radius: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border: none;
+  color: #fff;
+  padding: 0;
+  height: 3rem;
+  line-height: 3rem;
+  padding: 0 10px;
+  margin: 1px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.va-vc-header > span {
+  pointer-events: none;
+  user-select: none;
+}
+.va-vc-header:hover {
+  /* background-color: #24a799; */
+}
+.va-vc-quick-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.va-vc-quick-announce {
+  width: 20%;
+  margin: 15px;
+  border: 1px solid black;
+  height: 70px;
+}
+.va-vc-quick-announce:hover {
+  background: #009688;
+}
+.va-expand {
+  max-height: 350px;
+}
+.expand-icon {
+  font-size: 1.4rem;
+  margin: 0 8px;
+  user-select: none;
+  pointer-events: none;
+  transform: rotate(0);
+  transition: transform 0.2s ease-out;
+}
+.va-input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 15px;
+}
+label {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.va-input-text {
+  font-size: 1.6rem;
+  margin: 3px;
+  padding: 2px;
+}
+.pull-right {
+  float: right;
+}
+.rotate {
+  /* transform: scale(-1, -1); */
+  transform: scale(2 2);
+}
+.btn-audio {
+  background-color: #2a48ca;
+  height: 40px;
+  min-height: 40px;
+  padding: 4px 20px;
+  border-radius: 20px;
+  margin: 5px 5px;
+}
+.btn-audio:hover {
+  background-color: #586fd6;
+}
+.btn-aud-large {
+  height: 70px;
+}
+/* body {
+    margin: 0;
+    font-family: 'Roboto';
+    font-size: 14px;
+    /* background: #455A64; 
+  } */
+
+/* h3 {
+    color: #444;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 30px;
+    font-weight: 300;
+  }
+  
+  .container {
+    width: 1500px;
+  }
+  
+  div[class*='col-'] {
+    padding: 0 30px;
+  }
+  
+  .wrap {
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+  }
+  
+  a:focus,
+  a:hover,
+  a:active {
+    outline: 0;
+    text-decoration: none;
+  }
+  
+  .panel {
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: #fff;
+    background: none;
+    box-shadow: none;
+  }
+  
+  .panel:last-child {
+    border-bottom: none;
+  }
+  
+  .panel-group > .panel:first-child .panel-heading {
+    border-radius: 4px 4px 0 0;
+  }
+  
+  .panel-group .panel {
+    border-radius: 0;
+  }
+  
+  .panel-group .panel + .panel {
+    margin-top: 0;
+  }
+  
+  .panel-heading {
+    background-color: #009688;
+    border-radius: 0;
+    border: none;
+    color: #fff;
+    padding: 0;
+  }
+  
+  .panel-title a {
+    display: block;
+    color: #fff;
+    padding: 15px;
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  .panel-body {
+    background: #fff;
+  } */
+
+.datePicker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.datePickerItem {
+  /*
+    */
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  text-align: center;
+}
+
+.va-input-text-sm {
+  width: 40px;
+  font-size: 1.6rem;
+  margin: 3px 5px;
+  text-align: center;
+}
+.lateEmpItem {
+  margin: 5px;
+}
+.lateEmp {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  text-align: center;
+}
+
+.va-upcoming-timed-messages {
+  width: 90%;
+  height: fit-content;
+  max-height: 200px;
+  overflow-y: auto;
+  margin: 10px auto;
+  padding: 8px;
+  box-shadow: 2px 2px 5px lightblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.va-timed-row {
+  height: fit-content;
+  font-size: 1.2rem;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.va-timed-time {
+  padding: 3px;
+  width: 35%;
+  height: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background-color: #6ec9c0;
+}
+
+.va-timed-message {
+  padding: 3px;
+  width: 65%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background-color: #c0e9e5;
+}
+
+.va-header-pill {
+  width: 100%;
+  margin: 5px auto;
+  padding: 5px;
+  background-color: hsla(0, 0%, 45%, 1);
+  color: white;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+/*  TypeScript Rewrite of Voice Announcement Portal */
+
+.va-category-header {
+  background-color: hsl(210, 65%, 40%);
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 8px;
+}
+
+.va-category-header:hover {
+  filter: brightness(120%);
+  cursor: pointer;
+}
+
+.open > .va-category-body {
+  display: flex;
+}
+.va-category-body {
+  display: none;
+  background-color: white;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 8px;
+  font-size: 14px;
+}
+.va-category-body-quick {
+  display: block;
+  height: 120px;
+  width: 100%;
+}
+.va-announcement {
+  margin: 8px 12px;
+  background-color: hsl(210, 75%, 70%);
+  padding: 8px;
+  border-radius: 25px;
+  font-weight: 600;
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+}
+.va-announcement:hover {
+  filter: brightness(120%);
+}
+.va-annoucement-quick {
+  padding: 12px;
+}
+
+.va-announcement-history {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-size: 1.2rem;
+  margin: 8px 4px;
+  min-height: fit-content;
+}
+
+.va-history-time {
+  width: 56px;
+  margin-right: 4px;
+  padding: 8px 6px 0 0;
+  text-align: right;
+}
+.va-history-message {
+  flex: 1;
+  background-color: #ffcfcf;
+  padding: 4px 8px;
+  border-radius: 15px;
+  font-weight: 600;
+}
+.va-announcement-timed {
+  background-color: lightgreen;
+}
+.va-queue-time {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.2rem;
+  width: 110px;
+  min-width: 110px;
+}
+.va-queue-message {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-left: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex: 1;
+}
+.va-queue-message:hover {
+  cursor: pointer;
+}
+.va-queue-aux {
+  display: none;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-right: 15px;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.va-queue-aux > button {
+  font-size: 1.2rem;
+  background-color: transparent;
+  color: hsl(210, 65%, 50%);
+  margin: auto 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 600;
+}
+.va-queue-aux > button:hover {
+  font-size: 1.2rem;
+  color: hsl(210, 65%, 15%);
+  margin: 0 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.va-queue-timed-row:hover {
+  cursor: pointer;
+}
+.va-queue-timed-row:hover .va-queue-aux {
+  display: flex;
+}
+.va-queue-timed-row:hover .va-queue-time {
+  display: none;
+}
+.va-queue-timed {
+  width: 100%;
+  height: 150px;
+  max-height: 150px;
+  background-color: hsl(210, 75%, 90%);
+  border: 1px solid hsl(210, 55%, 40%);
+  margin: 16px 8px;
+  padding: 8px;
+  border-radius: 5px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.va-category-component {
+  position: relative;
+}
+.va-queue-timed-header {
+  background-color: hsl(210, 75%, 70%);
+  color: hsl(210, 55%, 15%);
+  font-weight: 600;
+  border-radius: 3px;
+  padding: 8px;
+}
+.va-queue-timed-row {
+  padding: 8px;
+}
+.va-queue-timed-row:nth-child(odd) {
+  background-color: hsl(210, 85%, 95%);
+}
+
+/*  RECURRING MODULE  */
+.va-editor-header {
+  background-color: hsl(210, 75%, 90%);
+  font-weight: 600;
+  padding: 8px;
+}
+
+.va-editor-tab > span {
+  padding: 4px 12px;
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid hsl(210, 55%, 70%);
+}
+.va-editor-tab > span:hover {
+  background-color: hsl(210, 75%, 80%);
+  cursor: pointer;
+}
+.va-editor-tab > .va-editor-tab-active {
+  background-color: hsl(210, 75%, 80%);
+}
+.va-editor-container {
+  padding: 8px;
+  border: 1px solid green;
+  width: 100%;
+  position: relative;
+}
+.va-editor-subcomponent {
+  width: 100%;
+  display: none;
+  justify-content: center;
+}
+.va-editor-subcontainer {
+  width: 100%;
+  background-color: hsl(210, 75%, 90%);
+  border: 1px solid hsl(210, 55%, 40%);
+  padding: 4px;
+  border-radius: 5px;
+}
+
+.va-editor-view-view {
+  display: none;
+}
+
+.va-editor-assertion-body {
+  display: none;
+}
+
+.show-flex {
+  display: flex;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.va-history-link > a {
+  text-decoration: none;
+  display: block;
+  color: black;
+}
+
+.va-hover:hover {
+  filter: saturate(90%) brightness(90%);
+  cursor: pointer;
+}

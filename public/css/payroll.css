@@ -1,0 +1,580 @@
+/* Refactored Payroll Classes [01/27/2020] */
+.pr-cell {
+  margin-left: -1px;
+  margin-top: -1px;
+  padding: 5px 8px;
+  position: relative;
+  border: 1px solid black;
+}
+.pr-cell:first-of-type {
+}
+.pr-cell:last-of-type {
+}
+.pr-cell-status {
+  width: 30px;
+  min-width: 30px;
+  position: relative;
+}
+
+.pr-cell-status > span > i{
+  pointer-events: none;
+}
+
+.pr-cell-fitcontent {
+  width: 42px;
+  min-width: 42px;
+  max-width: 42px;
+  padding: 5px 4px;
+}
+.pr-cell-name {
+  flex: 4;
+  min-width: 140px;
+}
+.pr-cell-currency {
+  flex: 3;
+  min-width: 120px;
+}
+.pr-cell-hours {
+  flex: 2;
+  min-width: 80px;
+  max-width: 80px;
+}
+.pr-cell-rate {
+  flex: 1;
+  min-width: 63px;
+}
+.pr-row-border {
+}
+.pr-detail-container > summary {
+  pointer-events: all;
+  padding: 4px 0px 4px 28px;
+  border-bottom: 1px solid black;
+}
+
+.pr-detail-container > summary:hover {
+  cursor: pointer;
+  filter: brightness(90%);
+}
+
+.pr-detail-container span {
+  margin: auto 5px;
+  pointer-events: none;
+}
+
+.pr-detail-container > div {
+  pointer-events: none;
+}
+
+.pr-header {
+  font-weight: 600;
+  background-color: hsla(0, 0%, 97%, 1);
+}
+.pr-edit-container {
+  border: 1px solid black;
+}
+
+.payroll-container {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  font-size: 1.2rem;
+  padding-bottom: 50px;
+}
+.payroll-row-container {
+  width: 100%;
+  margin: 0;
+}
+
+.pr-action-row {
+  background-color: white;
+}
+
+.pr-detail-container[open] .pr-shifts-body-container {
+  display: flex;
+}
+
+.pr-detail-container[open] .down-arrow {
+  transform: rotate(0);
+}
+
+.pr-audit-time {
+  display: flex;
+}
+
+.pr-audit-diff {
+  display: none;
+}
+/*  EDIT MODAL  */
+/* .editModalContainer {
+   position: absolute;
+   height: fit-content;
+   width: 240px;
+   background-color: hsl(60, 60%, 90%);
+   border-radius: 7px;
+   border: 1px solid black;
+   padding: 12px;
+   font-size: 16px;
+   z-index: 5000;
+   user-select: none;
+   pointer-events: all;
+   cursor: auto;
+   left: 50%;
+   margin-left: -119px;
+   top: 100%;
+   box-shadow: 1px 2px hsla(0, 0%, 0%, 0.25), 1px 4px hsla(0, 0%, 0%, 0.15);
+} */
+.editModalContainer {
+  position: absolute;
+  height: fit-content;
+  width: 100%;
+  background-color: hsl(210, 90%, 85%);
+  /* border-radius: 7px; */
+  /* border: 1px solid black; */
+  /* padding: 12px; */
+  font-size: 16px;
+  z-index: 5000;
+  user-select: none;
+  pointer-events: all;
+  cursor: auto;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* margin-left: -119px; */
+  /* top: 100%; */
+  /* box-shadow: 1px 2px hsla(0, 0%, 0%, 0.25), 1px 4px hsla(0, 0%, 0%, 0.15); */
+}
+[id="icon"] > .fa-check {
+  pointer-events: none;
+}
+.editModalTextTwoMax {
+  width: 40px;
+  text-align: center;
+  height: 36px;
+  font-size: 16px;
+}
+.editModalTextFourMax {
+  width: 60px;
+}
+/* .editModalCloser {
+   position: absolute;
+   top: 0;
+   right: 0;
+   margin: 4px;
+   font-size: 16px;
+   cursor: pointer;
+} */
+
+.editModalSubmit {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.editModalSubmit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 4px;
+  font-size: 16px;
+}
+
+.pr-shift-header {
+  border-bottom: 1px solid black;
+}
+.pr-shift-header:last-of-type {
+  border-bottom: none;
+}
+.pr-summary-container {
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  background-color: white;
+  display: none;
+}
+
+.pr-edit-active {
+  background-color: hsl(210, 90%, 85%);
+}
+
+.editModal-text {
+  margin: 3px;
+  padding: 2px;
+  border: none !important;
+  font-size: 16px;
+  max-width: 28px;
+  text-align: center;
+  border-radius: 0px !important;
+}
+.select-wrap > select.editModal-text {
+  padding: 2px 16px 2px 4px !important;
+  max-width: fit-content;
+}
+
+.editModalCloser {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 4px;
+  font-size: 16px;
+}
+.editModal-timeContainer {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+}
+
+.editModal-calendar {
+  position: absolute;
+  left: 100%;
+  top: -2px;
+  margin-left: 4px;
+  margin-top: 4px;
+}
+
+.editModalButton {
+  background-color: transparent;
+  border: none;
+  padding: none;
+  margin: none;
+  color: black;
+}
+
+.editModalButton > .fa-calendar {
+  color: hsl(210, 65%, 40%);
+}
+.editModalButton > .fa-arrow-circle-up {
+  color: hsl(147, 57%, 38%);
+}
+.editModalButton > .fa-times-circle {
+  color: rgb(216, 61, 47);
+}
+
+.editModalTimeContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
+}
+.editModalDateContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
+  border-top: 1px solid hsl(210, 65%, 40%);
+}
+.editModal-year {
+  min-width: 44px !important;
+}
+
+.pr-edit-row {
+  background-color: hsl(4, 100%, 97%);
+}
+
+.pr-highlight-red {
+  background-color: hsl(4, 100%, 93%);
+  color: hsl(5, 52%, 10%);
+}
+
+.pr-highlight-red:hover > .pr-audit-diff {
+  display: flex;
+}
+.pr-highlight-red:hover > .pr-audit-time {
+  display: none;
+}
+
+.pr-edit-row-green {
+  background-color: hsl(112, 71%, 94%);
+}
+.pr-edit-cell-green {
+  background-color: hsl(112, 71%, 87%);
+}
+.pr-highlight-green {
+  background-color: hsl(112, 90%, 90%);
+}
+
+.pr-nextday-alert {
+  font-size: 12px;
+  color: red;
+  font-weight: 400;
+  margin-left: 5px;
+  margin-top: -1px;
+}
+
+/*  */
+.ip-container {
+  height: fit-content;
+  width: 225px;
+  bottom: 0;
+  right: 0;
+  /* top: 600px;
+   left: 600px; */
+  background-color: hsl(0, 0%, 90%);
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 5px;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  opacity: 1;
+  z-index: 5000;
+}
+.open > .ip-container,
+.open > .cc-container {
+  display: flex;
+}
+
+.ip-read-comment {
+  height: fit-content;
+  width: 100%;
+  background-color: hsl(0, 0%, 95%);
+  border: 1px solid hsl(0, 0%, 50%);
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+.ip-write-comment {
+  width: 100%;
+  height: fit-content;
+  background-color: hsl(0, 0%, 90%);
+}
+.ip-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.ip-comment-text {
+  font-size: 1.3rem;
+  padding: 5px;
+  text-transform: none;
+}
+.ip-comment-meta {
+  font-size: 0.9rem;
+  color: hsl(0, 0%, 20%);
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-transform: capitalize;
+}
+.ip-author {
+  font-size: 1.1rem;
+}
+.ip-input {
+  font-size: 1.2rem !important;
+}
+
+/*  */
+.cc-container {
+  height: fit-content;
+  width: 225px;
+  bottom: 0;
+  right: 0;
+  /* top: 600px;
+   left: 600px; */
+  background-color: hsl(0, 0%, 90%);
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 5px;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  opacity: 1;
+  z-index: 5000;
+}
+.cc-read-comment {
+  height: fit-content;
+  width: 100%;
+  background-color: hsl(0, 0%, 95%);
+  border: 1px solid hsl(0, 0%, 50%);
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+.cc-write-comment {
+  width: 100%;
+  height: fit-content;
+  background-color: hsl(0, 0%, 90%);
+}
+.cc-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.cc-comment-text {
+  font-size: 1.3rem;
+  padding: 5px;
+  text-transform: none;
+  text-align: left;
+}
+.cc-comment-meta {
+  font-size: 0.9rem;
+  color: hsl(0, 0%, 20%);
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-transform: capitalize;
+}
+.cc-author {
+  font-size: 1.1rem;
+}
+.cc-input {
+  font-size: 1.2rem !important;
+  padding-left: 6px;
+}
+
+.pr-header-status-cell {
+  border: 1px solid transparent;
+  margin-left: -1px;
+  margin-top: -1px;
+}
+.pr-record-open {
+  background-color: lightblue;
+}
+
+.pr-shift-detail-container {
+  display: none;
+}
+
+.pr-shifts-body-container {
+    display:none;
+    background-color: var(--lighter-grey);
+}
+
+.pr-detail-container[open] {
+    background-color: lightblue;
+}
+
+.open + .pr-shifts-body-container {
+    display:flex;
+}
+
+.pr-record-open > .pr-summary-container,
+.pr-record-open > .pr-shift-detail-container {
+  display: flex;
+}
+
+.col-green {
+  background-color: #c3d6c9;
+}
+.col-yellow {
+  background-color: #f7ebbe;
+}
+.col-blue {
+  background-color: #c4d7f9;
+}
+
+[id='ui:payroll:record'].loaded > .pr-hover:hover {
+  background-color: lightblue;
+  cursor: pointer;
+}
+/* [id='ui:payroll:record'].loaded.pr-record-open > .pr-hover div,
+[id='ui:payroll:record'].loaded.pr-hover:hover div {
+  cursor: pointer;
+} */
+
+[id='ui:payroll:record'].loaded > .pr-hover:hover .col-blue,
+.pr-record-open .col-blue,
+[id='ui:payroll:record'].loaded > .pr-hover:hover .col-yellow,
+.pr-record-open .col-yellow,
+[id='ui:payroll:record'].loaded > .pr-hover:hover .col-green,
+.pr-record-open .col-green {
+  /* background-color: lightblue; */
+  filter: brightness(110%);
+}
+
+.pr-loading-spinner {
+  position: absolute;
+  height: 100%;
+  width: 15px;
+  right: 6px;
+  top: 0;
+  display: block;
+  padding-top: 2px;
+  color: red;
+  font-size: 14px;
+}
+
+.pr-loading-spinner > i {
+}
+[id='ui:payroll:record'] .pr-cell-name {
+  background-color: hsla(0, 0%, 89%, 1);
+}
+[id='ui:payroll:record'].loaded .pr-cell-name {
+  background-color: transparent;
+}
+
+@media (max-width: 750px) {
+  .editModalContainer {
+    top: 41%;
+    left: 5%;
+    background-color: var(--accent-blue-mid);
+    display: block;
+    border-radius: 5px;
+    height: 19%;
+    width: 90%;
+    padding: 16px;
+    position: fixed;
+    border: 1px solid black;
+  }
+  .editModalContainer button {
+    font-size: 22px;
+  }
+  .editModal-year {
+    width: 60px;
+  }
+  .editModalTimeContainer {
+    margin-bottom: 10px;
+  }
+
+  .editModalDateContainer {
+    padding-top: 10px;
+  }
+  .editModalSubmit > .editModalButton {
+    top: 57px;
+    position: absolute;
+    right: 100%;
+  }
+  .editModalCloser > .editModalButton {
+    top: -3px;
+    position: absolute;
+    left: -5px;
+  }
+  .editModal-text {
+    font-size: 20px;
+    margin: 4px 10px;
+  }
+  .editModal-year {
+    max-width: 60px;
+    width: 60px;
+  }
+  .editModalSubmit {
+    position: absolute;
+    /* top: 0; */
+    /* right: 0; */
+    margin: 4px;
+    font-size: 16px;
+    bottom: -68px;
+    right: 0px;
+  }
+  .pr-edit-active {
+    position: inherit;
+  }
+  .editModalCloser {
+    font-size: 22px;
+  }
+  .editModalSubmit {
+    font-size: 26px;
+  }
+}

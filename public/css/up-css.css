@@ -1,0 +1,209 @@
+.up-container {
+   margin: 15px auto;
+   height: 80%;
+   width: 80%;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   border: 1px solid black;
+   /* DELETE ME \/\/\/\/ -------------------------------------*/
+   border: 1px solid black;
+   /* DELETE ME ^^^^^  ----------------------------------------*/
+   box-sizing: border-box;
+   overflow: auto;
+}
+
+.up-row {
+   height: auto;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+}
+
+.up-row-primary {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   width: 100%;
+   height: 100px;
+}
+.up-row-secondary {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   width: 100%;
+   height: 100px;
+}
+
+.up-icon-item {
+   height: 90px;
+   min-height: 90px;
+   max-height: 90px;
+   width: 90px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-content: center;
+   text-align: center;
+   margin: 4px 4px;
+   border-radius: 5px;
+   border: 2px solid darkgrey;
+   background-color: lightgrey;
+}
+.up-summary-item {
+   height: 90px;
+   min-height: 90px;
+   max-height: 90px;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-content: center;
+   text-align: center;
+   margin: 4px 4px;
+   border-radius: 5px;
+   border: 2px solid darkgrey;
+   background-color: lightgrey;
+}
+.up-summary-item:hover {
+   border-radius: 9px;
+   border: 2px solid rgb(116, 116, 116);
+   background-color: rgb(179, 205, 223);
+}
+
+.up-summary-heading {
+   height: 55%;
+   font-size: 1.6rem;
+   line-height: 4.3rem;
+   font-weight: bold;
+   text-align: left;
+   width: 100%;
+   padding-left: 15px;
+   color: rgb(29, 29, 29);
+}
+.up-summary-summary {
+   height: 40%;
+   font-size: 1.2rem;
+   font-weight: bold;
+   text-align: left;
+   width: 100%;
+   padding-left: 30px;
+   color: rgb(138, 138, 138);
+}
+
+/* .up-row-secondary {
+    overflow: hidden;
+    height: auto;
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid darkgrey;
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+} */
+
+.up-row-seon {
+   height: 25px;
+   width: 100%;
+   background-color: lightcyan;
+}
+.collapse {
+   display: none;
+}
+.up-row-secondary-blank {
+   height: 90px;
+   min-height: 90px;
+   max-height: 90px;
+   width: 90px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-content: center;
+   text-align: center;
+   margin: 4px 4px;
+}
+.up-row-secondary-container {
+   height: 90px;
+   min-height: 90px;
+   max-height: 90px;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-content: center;
+   text-align: center;
+   margin: 4px 4px;
+   border-radius: 5px;
+   border: 2px solid darkgrey;
+   background-color: rgb(233, 232, 216);
+   overflow: hidden;
+}
+.up-row-heading {
+   height: 25px;
+   width: 100%;
+   background-color: rgb(201, 222, 236);
+   border-bottom: 1px solid darkgray;
+}
+.up-row-content {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   height: 100%;
+}
+.up-row-content-row {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   flex: 1;
+}
+.up-row-content-item {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   font-size: 1.4rem;
+   height: 100%;
+}
+.up-row-content-item-heading {
+   width: 20%;
+   align-items: center;
+}
+.up-row-content-item-content {
+   flex: 1;
+   align-items: left;
+   text-align: left;
+}
+
+@media (max-width: 700px) {
+   .up-container {
+      width: 98%;
+      height: 100%;
+      overflow-y: auto;
+   }
+   .up-row-content-item {
+      font-size: 1.1rem;
+   }
+   .up-row-content-item-heading {
+      width: 30%;
+   }
+}
+
+/* UPDATEPIN.HTML */
+.up-container-pin {
+   /* justify-content: center; */
+   /* align-content: center; */
+   border: none;
+}
+.up-row-pin {
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 15px;
+   max-width: 300px;
+   min-width: 300px;
+   box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+}

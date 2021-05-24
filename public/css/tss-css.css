@@ -1,0 +1,134 @@
+.tss-container {
+  background-color: rgb(228, 228, 228);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: auto;
+  min-height: 100%;
+  margin: 0;
+}
+.tss-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.tss-status {
+  width: 100%;
+  /* background-color: lightcoral; */
+  padding: 6px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+}
+.tss-row-flex {
+  flex: 1;
+}
+.tss-row-narrow {
+  width: 16%;
+  min-width: 80px;
+  background-color: rgb(228, 228, 228);
+}
+.tss-row-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: auto;
+  overflow-x: hidden;
+}
+.tss-col-item {
+  padding: 4px 16px;
+  text-align: center;
+  /* flex: 1; */
+  font-size: 1.4rem;
+  width: 100%;
+}
+.tss-col-heading {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  background-color: rgb(170, 170, 170);
+  padding: 4px 8px;
+  /* flex: 1; */
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+  width: 100%;
+}
+
+.clockedin {
+  background-color: #00cc33;
+}
+.clockedout {
+  background-color: rgb(236, 56, 32);
+}
+.onbreak {
+  background-color: rgb(241, 158, 32);
+}
+.onlunch {
+  background-color: rgb(236, 233, 48);
+}
+.tss-border {
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+  overflow: auto;
+  overflow-x: hidden;
+}
+.tss-status-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+@media (max-width: 750px) {
+  .tss-row-flex {
+    flex-direction: column;
+  }
+  .tss-row-narrow {
+    order: 0;
+    flex-direction: row;
+    width: 100%;
+    border-bottom: 1px solid rgb(22, 60, 78);
+    border-top: 1px solid rgb(22, 60, 78);
+  }
+  .tss-status-row {
+    border-top: 1px solid rgb(22, 60, 78);
+  }
+  .tss-row-flex {
+    order: 1;
+  }
+  .tss-col-heading {
+    border: none;
+    border-right: 1px solid darkgray;
+  }
+  .tss-col-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 4px 0;
+  }
+  .tss-border {
+    border: none;
+  }
+}
+
+.testC {
+  background-color: blue;
+}
+
+@media (max-width: 400px) {
+  .sm:testc {
+    background-color: green;
+  }
+}
+
+@media (max-width: 1000px) {
+  .md:testc {
+    background-color: red;
+  }
+}

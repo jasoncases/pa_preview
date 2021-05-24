@@ -1,0 +1,30 @@
+body {
+   font-family: 'Montserrat', sans-serif;
+}
+
+.alert {
+   display: none;
+   height: 35px;
+   width: 35%;
+   position: absolute;
+   top: 1.5%;
+   left: 32%;
+   font-size: 14px;
+   line-height: 35px;
+   text-align: center;
+   opacity: 70%;
+   z-index: 50;
+}
+
+.success {
+   display: inline;
+   background-color: #bdd6a2;
+   color: white;
+   border: 2px solid #386605;
+}
+.error {
+   background-color: #c2896c;
+   display: inline;
+   color: white;
+   border: 2px solid #712a05;
+}

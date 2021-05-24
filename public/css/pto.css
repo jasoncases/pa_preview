@@ -1,0 +1,15 @@
+.pto-table {
+   width: 80%;
+   margin: 30px auto;
+   overflow: hidden;
+   border-radius: 3px;
+   border: 1px solid gray;
+}
+.pto-table > .flex-row:first-child {
+   background-color: hsl(194, 23%, 94%);
+   border-bottom: 1px solid gray;
+}
+.pto-table > .flex-row {
+   font-size: 16px;
+   padding: 8px;
+}

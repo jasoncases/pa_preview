@@ -1,0 +1,124 @@
+.p-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  height: fit-content;
+  width: 85%;
+  margin-bottom: 50px;
+}
+.p-row {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.p-heading {
+  font-weight: bold;
+  background-color: lightgray;
+  position: sticky;
+  top: 0px;
+}
+.p-row-item {
+  flex: 1;
+  text-align: center;
+  align-content: center;
+  border: 1px solid grey;
+  justify-content: center;
+  font-size: 12px;
+  margin: -1px 0 0 -1px;
+}
+.custom-label {
+  font-size: 14px;
+  display: inline;
+}
+.search-breadcrumb-container {
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 30px;
+  width: 100%;
+  justify-content: flex-start;
+}
+.breadcrumb {
+  font-size: 12px;
+  height: 85%;
+  border: 1px solid rgb(73, 109, 121);
+  background-color: lightblue;
+  border-radius: 15px;
+  padding: 5px 10px;
+  margin: 2px 6px;
+  justify-content: center;
+}
+.breadcrumb:hover {
+  background-color: lightskyblue;
+}
+.prod-ul {
+  margin: 20px auto;
+  list-style-type: none;
+  width: 600px;
+  padding-inline-start: 0;
+  font-size: 16px;
+  background-color: hsla(0, 0%, 95%, 1);
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.prod-li {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 4px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.prod-li:nth-child(odd) {
+  background-color: hsla(0, 0%, 91%, 1);
+}
+.prod-name {
+  width: 30%;
+}
+.prod-hours {
+  width: 30%;
+  text-align: right;
+}
+.prod-prod {
+  width: 30%;
+  text-align: right;
+}
+.prod-header {
+  font-weight: bold;
+}
+.p-row-margin {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.p-inner-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 30px;
+  background-color: hsla(0, 0%, 90%, 1);
+}
+.p-inner-row-header {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.p-row-container:hover {
+  background-color: lightblue;
+}
+
+.p-row-container:hover > .p-row-employee-summary {
+  display: flex;
+}
+
+.p-row-employee-summary {
+  display: none;
+  margin: 16px 32px;
+}

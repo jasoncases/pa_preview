@@ -1,0 +1,160 @@
+.chevron-separater {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.chevron-separater::after {
+  font-family: 'Font Awesome 5 Pro';
+  content: '\f054';
+  display: inline;
+  color: black;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  pointer-events: all;
+  margin: auto 12px;
+}
+
+.delete-icon::after {
+  font-family: 'Font Awesome 5 Pro';
+  content: '\f057';
+  display: inline;
+  color: hsl(0, 35%, 55%);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  pointer-events: all;
+}
+
+.hover.delete-icon {
+  display: none;
+}
+
+.icon-12 {
+  font-size: 12px;
+}
+.icon-14 {
+  font-size: 14px;
+}
+.icon-16 {
+  font-size: 16px;
+}
+.icon-18 {
+  font-size: 18px;
+}
+.icon-20 {
+  font-size: 20px;
+}
+.icon-22 {
+  font-size: 22px;
+}
+
+.icon-delete::after {
+  font-family: 'Font Awesome 5 Pro';
+  content: '\f057';
+  display: inline;
+  color: hsl(0, 35%, 55%);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  pointer-events: all;
+}
+
+.icon-show {
+  visibility: visible;
+}
+
+.icon-hover:hover {
+  visibility: visible;
+}
+
+.chevron-16::before {
+  font-family: 'Font Awesome 5 Pro';
+  content: '\f054';
+  display: inline;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px;
+  cursor: pointer;
+  user-select: none;
+  pointer-events: all;
+}
+
+.flip-h {
+  transform: scaleX(-1);
+}
+
+.rot-90 {
+  transform: rotate(90deg);
+}
+
+.icon-chevron-down {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.icon-chevron-down::after {
+  font-family: 'Font Awesome 5 Pro';
+  content: '\f054';
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px;
+  user-select: none;
+  pointer-events: all;
+  transition: transform 0.3s;
+  transform: rotate(90deg);
+  pointer-events: none;
+}
+
+.open .icon-chevron-down::after {
+  transform: rotate(-90deg);
+}
+
+.icon-chevron-left {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.icon-chevron-left::after {
+  font-family: 'Font Awesome 5 Pro';
+  content: '\f054';
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px;
+  user-select: none;
+  pointer-events: all;
+  transition: transform 0.3s;
+  transform: rotate(180deg);
+}
+
+@media screen and (max-width: 1024px) {
+  .delete-icon-hover .delete-icon {
+    display: block;
+    font-size: 16px;
+  }
+  .delete-icon::after {
+    font-size: 16px;
+  }
+  .delete-icon-18::after {
+    font-size: 18px;
+  }
+}
+.delete-icon-18::after {
+  font-size: 18px;
+}

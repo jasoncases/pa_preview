@@ -1,0 +1,231 @@
+/* 
+ prefix: cmm (code-manage-mobile)
+*/
+
+.cmm-container {
+  width: 100%;
+  max-height: 0;
+  background-color: #fff;
+  z-index: 1;
+  display: none;
+  transition: max-height 3s ease-in;
+  overflow: hidden;
+}
+
+.open .cmm-container {
+  display: flex;
+  max-height: 590px;
+}
+
+.testtest {
+}
+
+.open > .code-row {
+  background-color: hsl(0, 0%, 95%);
+}
+
+.open ~ .cmm-input {
+  display: block;
+}
+
+.cmm-input {
+  display: none;
+}
+
+.cmm-text-imp {
+  font-size: 18px;
+}
+
+.cmm-item {
+  margin: 5px;
+}
+
+.cmm-row {
+  margin: 2px 5px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.cmm-text-sub {
+  font-size: 14px;
+  margin-right: 8px;
+}
+.cmm-header {
+  padding: 5px;
+}
+.cmm-row .cmm-input {
+  margin: 5px;
+  padding: 5px;
+}
+.cmm-label {
+  padding: 10px;
+  font-size: 18px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.cmm-textarea {
+  background-color: rgb(255, 249, 241);
+  width: 100%;
+  height: 80px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid hsl(0, 0%, 60%);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.cmm-comment-add-container {
+  margin-top: 5px;
+}
+.cmm-input-text {
+  background-color: rgb(255, 249, 241);
+  border: 1px solid hsl(0, 0%, 60%);
+  border-radius: 3px;
+  font-size: 16px !important;
+  height: 32px !important;
+  padding: 5px 8px;
+  width: 100%;
+}
+
+.norm-collapse {
+  display: none;
+}
+.cmm-sub-input {
+  margin-bottom: 5px;
+}
+.cmm-admin-item {
+  margin: 13px 5px;
+}
+.cmm-content-col {
+  width: 48%;
+}
+.cmm-sub-item {
+  margin: 5px 0;
+}
+.cmm-btn-row {
+  padding: 8px;
+}
+@media (max-width: 1000px) {
+  .cmm-container {
+    font-size: 16px;
+    z-index: 10000;
+    background-color: white;
+  }
+  .cmm-header {
+    padding: 5px;
+  }
+  .cmm-item {
+    margin: 5px;
+  }
+  .cmm-row {
+    margin: 2px 5px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+  .cmm-row .cmm-input {
+    margin: 5px;
+    padding: 5px;
+  }
+  .cmm-text-imp {
+    font-size: 18px;
+  }
+  .cmm-text-sub {
+    font-size: 14px;
+  }
+  .cmm-label {
+    padding: 14px;
+    font-size: 18px;
+    position: relative;
+    border-radius: 5px;
+  }
+
+  .cmm-comment-add-container {
+    margin-top: 5px;
+  }
+  .cmm-input-text {
+    height: 32px !important;
+    font-size: 16px !important;
+    padding-left: 8px;
+    background-color: rgb(255, 249, 241);
+    border: 1px solid hsl(0, 0%, 60%);
+  }
+
+  .norm-collapse {
+    display: none;
+  }
+  .cmm-sub-input {
+    margin-bottom: 5px;
+  }
+  .cmm-admin-item {
+    margin: 13px 5px;
+  }
+}
+
+@media (max-width: 800px) {
+  .code-row {
+    position: static;
+  }
+  .open + .ct-mobile-modal > .cmm-container {
+    display: flex;
+    max-height: calc(100vh - 70px);
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+  .open + .ct-mobile-modal {
+    z-index: 5000;
+  }
+  .open .ct-detail-collapse {
+    display: flex;
+  }
+}
+.cmm-green-light {
+  background-color: hsl(112, 71%, 92%);
+  /* border: 1px solid hsl(112, 71%, 85%); */
+  color: hsl(112, 33%, 26%);
+  border: 1px solid hsl(112, 33%, 76%);
+}
+.cmm-green-dark {
+  background-color: hsl(112, 25%, 55%);
+  color: hsl(112, 15%, 15%);
+}
+.cmm-red-light {
+  background-color: hsl(4, 100%, 94%);
+  /* border: 1px solid hsl(4, 100%, 87%); */
+  color: hsl(5, 52%, 28%);
+  border: 1px solid hsl(5, 52%, 83%);
+}
+.cmm-red-dark {
+  background-color: hsl(4, 25%, 55%);
+  color: hsl(4, 10%, 5%);
+}
+.cmm-grey-light {
+  background-color: hsl(0, 0%, 91%);
+  /* border: 1px solid hsl(0, 0%, 84%); */
+  color: hsl(0, 0%, 20%);
+  border: 1px solid hsl(0, 0%, 60%);
+}
+.cmm-grey-dark {
+  background-color: rgb(160, 160, 160);
+}
+[id='ui:code:detail:code_integer'] > input,
+[id='ui:code:detail:code_integer'] > label {
+  pointer-events: none;
+  user-select: none;
+}
+
+.codetracker-multiselect__focii {
+  width: 250px;
+}
+
+.ct-mobile-modal {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 55px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}

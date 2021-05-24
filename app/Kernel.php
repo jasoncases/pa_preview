@@ -1,0 +1,1 @@
+d:\Ampps\www\zerodock\laravel\app\Kernel.php

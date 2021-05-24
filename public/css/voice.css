@@ -1,0 +1,22 @@
+.audio-text {
+  background-color: hsl(210, 75%, 40%);
+  color: white;
+  border: 1px solid hsl(210, 75%, 70%);
+  margin: 4px 0 16px 0;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  overflow: hidden;
+}
+.audio-frame {
+  overflow: hidden;
+  border: none !important;
+}
+.playing-msg {
+  font-weight: normal;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+.inner-audio-frame {
+  opacity: 0;
+}
